@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ASCII</title>
+  </head>
+  <body>
+    <div class="container">
+      <table>
+        <tr>
+          <td class="heading">Key</td>
+          <td class="keyName"></td>
+        </tr>
+        <tr>
+          <td class="heading">ASCII</td>
+          <td class="number"></td>
+        </tr>
+      </table>
+      <!-- <p>Key -</p>
+      <p>ASCII - <span class="number"></span></p> -->
+    </div>
+  </body>
+  <script>
+    window.addEventListener("keypress", function (e) {
+      const key = e.keyCode;
+      const name = e.key;
+      const p = document.querySelector(".number");
+      const n = document.querySelector(".keyName");
+      p.innerHTML = key;
+      n.innerHTML = name;
+      setInterval(1000);
+    });
+  </script>
+</html>
